@@ -4,46 +4,46 @@
  * and open the template in the editor.
  */
 package todo.com.java.controller;
-import com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
-import todo.com.java.controller.TaskController;
+
+import todo.com.java.model.Task;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 /**
  *s
  * @author informatica
  */
 class TaskControllerTest {
-   
-    private TaskController taskController;
+    static  ArrayList<Task> tareas =new ArrayList<Task>();
+    TaskController taskController;
+
     @BeforeEach
     
     
     void setUp(){
     
     taskController = new TaskController();
+  // tareas =new ArrayList<Task>();
+
+    taskController.crearTarea("Chanchito feliz","esta triste");
     }
     
     @Test
     void crearTareaTest(){
-        Assertions.assertsEquals(true,TaskController.crearTarea("Hola", "soy una tarea"));
+        Assertions.assertEquals(true,taskController.crearTarea("Hola", "soy una tarea"));
     }
     @Test
     void removeTask(){
-        Assertions.assertsEquals(false,TaskController.removeTask(50));
+        Assertions.assertEquals(true,taskController.removeTask(0));
     }
     @Test
     void updateTask(){
-        Assertions.assertsEquals(false,TaskController.updateTask("HolaOtraVez",1, 1));
+        Assertions.assertEquals(true,TaskController.updateTask("Continue",3,0));
 
         
     }
-    
-    
-    
-   
-    
-    
-    
+
 }

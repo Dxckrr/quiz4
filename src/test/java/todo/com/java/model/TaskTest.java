@@ -5,8 +5,6 @@
  */
 package todo.com.java.model;
 
-import todo.com.java.model.Task;
-import com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,30 +25,30 @@ class TaskTest {
 
     @Test
     void setDescriptionTest() {
-        Assertions.assertsEquals(true, task.setDescription("soy una tarea feliz"));
+        Assertions.assertEquals(true, task.setDescription("soy una tarea feliz"));
     }
 
     @Test
     void getDescriptionTest() {
-        Assertions.assertsEquals(true, task.getDescription());
+        Assertions.assertEquals("soy una tarea feliz", task.getDescription());
     }
 
     @Test
     void setTitleTest() {
-        Assertions.assertsEquals(true, task.setTitle("HolaOtraVez"));
+        Assertions.assertEquals(true, task.setTitle("HolaOtraVez"));
     }
 
     void getTitleTest() {
-        Assertions.assertsEquals(true, task.getTitle());
+        Assertions.assertEquals("HolaOtraVez", task.getTitle());
     }
 
     void setStatus() {
-        Assertions.assertsEquals(true, task.setStatus("complete"));
+        Assertions.assertEquals(true, task.setStatus("complete"));
 
     }
 
     void getStatus() {
-        Assertions.assertsEquals(true, task.getStatus());
+        Assertions.assertEquals("complete", task.getStatus());
 
     }
 

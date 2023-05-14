@@ -17,6 +17,9 @@ import todo.com.java.controller.TaskController;
  */
 public class ConsoleView {
 
+    public static void main(String [] args){
+        new ConsoleView();
+    }
     Scanner scanner = new Scanner(System.in);
 
     public ConsoleView() {
